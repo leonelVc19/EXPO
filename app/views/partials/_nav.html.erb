@@ -1,0 +1,27 @@
+<nav class="nav bg-light padding">
+    <li class="nav-item"> 
+        <%= link_to "Inicio", root_path, class:"nav-link" %>
+    </li>
+    
+  
+    <% if user_signed_in? %>
+    <li class="nav-item"> 
+        <%= link_to "Todos los articulos", todo_url, class:"nav-link" %>
+    </li>
+    <li class="nav-item"> 
+        <%= link_to "Mis Articulos", articles_path, class:"nav-link" %>
+    </li>
+    <li class="nav-item"> 
+        <%= link_to "Cerrar Sesion", destroy_user_session_path, method: :delete, class:"nav-link" %>
+    </li>
+    <% else %>
+
+    <li class="nav-item"> 
+        <%= link_to "Iniciar Sesion", new_user_session_path, class:"nav-link" %>
+    </li>
+
+    <li class="nav-item"> 
+        <%= link_to "Registro", new_user_registration_path, class:"nav-link" %>
+    </li>
+    <%end%>
+</nav>

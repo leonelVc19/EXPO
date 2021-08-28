@@ -1,0 +1,24 @@
+<div class="small-container center-block">
+
+<h1>Todos los articulos</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Usuario</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td scope="row"><%= article.id %> </td>
+        <td><%= article.name %></td>
+        <td><%= article.description %></td>
+        <td><%= article.user.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
