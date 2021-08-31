@@ -271,7 +271,7 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-   config.omniauth :facebook, '3522917894452394', '526f706292ea1220bf982800ca53c5ea', scope: 'user,public_repo', callback_url: "http://localhost:3000/user/auth/facebook"
+   config.omniauth :facebook, '3522917894452394', '526f706292ea1220bf982800ca53c5ea', callback_url: "http://localhost:3000/user/auth/facebook"
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
