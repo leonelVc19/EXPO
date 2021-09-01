@@ -3,8 +3,10 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-         devise:omniauthable
+         devise: :omniauthable
+
          has_many :articles
+
 
          def self.find_for_facebook_oauth(auth)
           user = User.where(provider: auth.provider, uid: auth.uid).first
