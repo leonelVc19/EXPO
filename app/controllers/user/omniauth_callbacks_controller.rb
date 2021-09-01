@@ -12,3 +12,4 @@ class User::OmniauthCallbacksController < Devise::OmniauthCallbacksController
            end
        end
    end
+   
