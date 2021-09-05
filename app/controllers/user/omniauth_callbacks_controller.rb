@@ -1,4 +1,4 @@
-class User::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+class User::OmniauthCallbacksController < Devise::OmniauthCallbacksController##hereda de :OmniauthCallbacksController
   skip_before_action :verify_authenticity_token, only: :facebook
   #
 
